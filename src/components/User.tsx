@@ -1,5 +1,5 @@
 function User() {
-  return <div>User</div>;
+  return <div className=" w-full h-screen "></div>;
 }
 
 export default User;
