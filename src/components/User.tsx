@@ -35,12 +35,12 @@ const userData = [
 function User() {
   return (
     <div className="w-full h-screen ">
-      <div className=" h-full grid lg:grid-rows-2 gap-3 lg:p-20 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-px text-center  ">
+      <div className=" h-full grid lg:grid-rows-2 gap-3 lg:p-20 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
         {userData.map((e) => {
           return (
             <div
               key={e.name}
-              className="box-border border border-black my-6 lg:mx-10 rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-2 p-6 flex flex-col justify-center items-center"
+              className="box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-2 p-4 flex flex-col justify-center items-center"
             >
               <img
                 src={e.img}
@@ -49,7 +49,7 @@ function User() {
                 height={80}
                 className="rounded-full"
               />
-              <p className="text-white">{e.name}</p>
+              <p className="text-white w-full flex items-end">{e.name}</p>
             </div>
           );
         })}
