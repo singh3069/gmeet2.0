@@ -4,7 +4,7 @@ import TimeAndName from "./TimeAndName";
 
 function Footer() {
   return (
-    <div className="flex w-full bg-black text-white justify-between py-2 bottom-0 absolute px-4">
+    <div className="flex w-full text-white justify-between py-2 absolute bottom-0 left-0 right-0  px-4">
       <TimeAndName />
       <MeetControls />
       <MessageAndUserInfo />

@@ -2,7 +2,7 @@ import micSVG from "../../IconsSVG/mic.svg";
 import videoSVG from "../../IconsSVG/videoCall.svg";
 import closedCaptionSVG from "../../IconsSVG/closedCaption.svg";
 import screenShareSVG from "../../IconsSVG/screenShare.svg";
-import infoSVG from "../../IconsSVG/info.svg";
+import moreSVG from "../../IconsSVG/more.svg";
 import leaveCallSVG from "../../IconsSVG/leaveCall.svg";
 import classNames from "classnames";
 
@@ -24,7 +24,7 @@ const controlsSetting = [
     hoverText: "Present now",
   },
   {
-    img: infoSVG,
+    img: moreSVG,
     hoverText: "More Options",
   },
   {
@@ -40,7 +40,18 @@ function MeetControls() {
       <div className="flex space-x-4">
         {controlsSetting.map((e) => {
           return (
-            <div className="p-2 bg-gray-500 box-border rounded-full">
+            <div
+              className={classNames(
+                "p-2 bg-neutral-700 relative box-border rounded-full cursor-pointer",
+                {
+                  "bg-red-700 rounded-3xl box-content":
+                    e.hoverText === "Leave call",
+                }
+              )}
+            >
+              <p className="hidden absolute hover:visible invisible top-0 text-sm text-red-800">
+                {e.hoverText}
+              </p>
               <img
                 src={e.img}
                 width={22}
