@@ -7,23 +7,23 @@ import lockSVG from "../../IconsSVG/lock.svg";
 const data = [
   {
     img: infoSVG,
-    hoverText: "Turn ON/OFF Microphone",
+    text: "Turn ON/OFF Microphone",
   },
   {
     img: participantsSVG,
-    hoverText: "Turn ON/OFF Camera",
+    text: "Turn ON/OFF Camera",
   },
   {
     img: chatSVG,
-    hoverText: "Turn on captions",
+    text: "Turn on captions",
   },
   {
     img: activitiesSVG,
-    hoverText: "Present now",
+    text: "Present now",
   },
   {
     img: lockSVG,
-    hoverText: "More Options",
+    text: "More Options",
   },
 ];
 
@@ -38,18 +38,15 @@ function MessageAndUserInfo({ setIsOpen, isOpen }: any) {
           return (
             <div
               className="p-2 hover:bg-neutral-700 relative box-border rounded-full cursor-pointer"
-              key={e.hoverText}
+              key={e.text}
               onClick={toggleSideBar}
             >
-              <p className="hidden absolute hover:visible invisible top-0 text-sm text-red-800">
-                {e.hoverText}
-              </p>
               <img
                 src={e.img}
                 width={22}
                 height={22}
                 className="cursor-pointer box-border"
-                alt={e.hoverText}
+                alt={e.text}
               />
             </div>
           );

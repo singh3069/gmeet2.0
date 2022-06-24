@@ -14,7 +14,7 @@ function Modal(prop: any) {
           "absolute w-52  border bg-white shadow-xl z-10  box-content rounded-md",
           {
             "-top-80 right-0": prop.modal === "modal01",
-            "-top-80 -right-44": prop.modal === "modal02",
+            "-top-80 right-0 md:-right-44": prop.modal === "modal02",
           }
         )}
       >

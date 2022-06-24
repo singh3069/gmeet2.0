@@ -11,19 +11,19 @@ import Modal from "../Modal";
 const controlsSetting = [
   {
     img: micSVG,
-    hoverText: "Turn ON/OFF Microphone",
+    text: "Turn ON/OFF Microphone",
   },
   {
     img: videoSVG,
-    hoverText: "Turn ON/OFF Camera",
+    text: "Turn ON/OFF Camera",
   },
   {
     img: closedCaptionSVG,
-    hoverText: "Turn on captions",
+    text: "Turn on captions",
   },
   {
     img: screenShareSVG,
-    hoverText: "Present now",
+    text: "Present now",
     modal: "modal01",
     data: [
       "Lorem ipsum dolor sit amet",
@@ -34,7 +34,7 @@ const controlsSetting = [
   },
   {
     img: moreSVG,
-    hoverText: "More Options",
+    text: "More Options",
     modal: "modal02",
     data: [
       "Lorem ipsum dolor sit amet",
@@ -45,7 +45,7 @@ const controlsSetting = [
   },
   {
     img: leaveCallSVG,
-    hoverText: "Leave call",
+    text: "Leave call",
     color: "red",
   },
 ];
@@ -61,14 +61,11 @@ function MeetControls() {
                 "p-2 bg-neutral-700 hover:bg-neutral-600 relative box-border rounded-full cursor-pointer",
                 {
                   "bg-red-700 rounded-3xl box-content hover:bg-red-500":
-                    e.hoverText === "Leave call",
+                    e.text === "Leave call",
                 }
               )}
-              key={e.hoverText}
+              key={e.text}
             >
-              <p className="hidden absolute hover:visible invisible top-0 text-sm text-red-800">
-                {e.hoverText}
-              </p>
               {e.modal ? (
                 <Modal img={e.img} data={e.data} modal={e.modal} />
               ) : (
@@ -77,7 +74,7 @@ function MeetControls() {
                   width={22}
                   height={22}
                   className="cursor-pointer box-border"
-                  alt={e.hoverText}
+                  alt={e.text}
                 />
               )}
             </div>
