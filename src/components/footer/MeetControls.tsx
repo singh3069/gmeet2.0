@@ -5,7 +5,7 @@ import screenShareSVG from "../../IconsSVG/screenShare.svg";
 import moreSVG from "../../IconsSVG/more.svg";
 import leaveCallSVG from "../../IconsSVG/leaveCall.svg";
 import classNames from "classnames";
-import { Menu } from "@headlessui/react";
+import upArrowSVG from "../../IconsSVG/upArrow.svg";
 import Modal from "../Modal";
 
 const controlsSetting = [
@@ -50,7 +50,10 @@ const controlsSetting = [
   },
 ];
 
-function MeetControls() {
+function MeetControls({ setIsOpen, isOpen }: any) {
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <div className="flex justify-center  space-x-4">
@@ -80,6 +83,20 @@ function MeetControls() {
             </div>
           );
         })}
+        <div
+          className={classNames(
+            "p-2 bg-neutral-700 visible sm:invisible hover:bg-neutral-600 relative box-border rounded-full cursor-pointer"
+          )}
+          onClick={toggleSideBar}
+        >
+          <img
+            src={upArrowSVG}
+            width={22}
+            height={22}
+            className="cursor-pointer box-border"
+            // alt={e.text}
+          />
+        </div>
       </div>
     </div>
   );

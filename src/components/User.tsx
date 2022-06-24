@@ -51,15 +51,15 @@ function User({ isOpen, setIsOpen }: any) {
       className={classNames(
         "w-auto transition-[margin] mr-0 ease-in-out px-5 mt-20 mb-10 md:mt-0 md:mb-0 duration-300 h-screen",
         {
-          "mr-80": isOpen,
+          "mr-80 mt-0 mb-0": isOpen,
         }
       )}
     >
       <div
         className={classNames(
-          " h-full w-full grid lg:grid-rows-2  justify-center gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ",
+          " h-full w-full grid lg:grid-rows-2  justify-center gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center ",
           {
-            "lg:grid-rows-3 lg:grid-cols-3": isOpen,
+            "lg:grid-rows-3 lg:grid-cols-3 invisible sm:visible": isOpen,
           }
         )}
       >
