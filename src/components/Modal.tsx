@@ -2,7 +2,6 @@ import { Menu } from "@headlessui/react";
 import classNames from "classnames";
 
 function Modal(prop: any) {
-  console.log(prop.data);
   return (
     <Menu>
       <Menu.Button as="div">
