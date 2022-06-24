@@ -9,7 +9,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex w-full">
-      <div className="w-4/5">
+      <div className="w-full">
         <User isOpen={isOpen} setIsOpen={setIsOpen} />
         <Footer setIsOpen={setIsOpen} isOpen={isOpen} />
       </div>
