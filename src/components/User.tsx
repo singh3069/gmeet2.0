@@ -49,18 +49,30 @@ function User({ isOpen, setIsOpen }: any) {
   return (
     <div
       className={classNames(
-        "w-full transition-[width] ease-in-out duration-300 h-screen flex",
+        "w-auto transition-[margin] mr-0 ease-in-out duration-300 h-screen flex-shrink",
         {
-          "w-4/5": isOpen,
+          "mr-80": isOpen,
         }
       )}
     >
-      <div className=" h-full w-full grid lg:grid-rows-2 gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
+      <div
+        className={classNames(
+          " h-full w-full grid lg:grid-rows-2  justify-center gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ",
+          {
+            "lg:grid-rows-3 lg:grid-cols-3": isOpen,
+          }
+        )}
+      >
         {userData.map((e) => {
           return (
             <div
               key={e.name}
-              className="box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 p-2 flex flex-col justify-center items-center"
+              className={classNames(
+                "box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 p-2 flex flex-col justify-center items-center",
+                {
+                  "h-full ": isOpen,
+                }
+              )}
             >
               <div className="w-full  flex justify-end">
                 <div className="p-2 hover:bg-neutral-700 relative box-border rounded-full cursor-pointer">
