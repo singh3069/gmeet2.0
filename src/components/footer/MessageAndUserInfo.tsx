@@ -27,7 +27,10 @@ const data = [
   },
 ];
 
-function MessageAndUserInfo() {
+function MessageAndUserInfo({ setIsOpen, isOpen }: any) {
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <div className="flex space-x-4">
@@ -39,6 +42,7 @@ function MessageAndUserInfo() {
               </p>
               <img
                 src={e.img}
+                onClick={toggleSideBar}
                 width={22}
                 height={22}
                 className="cursor-pointer box-border"

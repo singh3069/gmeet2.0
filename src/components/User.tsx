@@ -1,5 +1,6 @@
 import micSVG from "../IconsSVG/mic.svg";
 import offMicSVG from "../IconsSVG/offMic.svg";
+import Sidebar from "./Sidebar";
 
 const userData = [
   {
@@ -43,10 +44,10 @@ const userData = [
     mic: offMicSVG,
   },
 ];
-function User() {
+function User({ isOpen, setIsOpen }: any) {
   return (
-    <div className="w-full  h-screen ">
-      <div className=" h-full grid lg:grid-rows-2 gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
+    <div className="w-full  h-screen flex">
+      <div className=" h-full w-full grid lg:grid-rows-2 gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
         {userData.map((e) => {
           return (
             <div
@@ -77,6 +78,7 @@ function User() {
           );
         })}
       </div>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }
