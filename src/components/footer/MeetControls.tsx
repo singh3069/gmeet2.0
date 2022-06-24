@@ -6,6 +6,7 @@ import moreSVG from "../../IconsSVG/more.svg";
 import leaveCallSVG from "../../IconsSVG/leaveCall.svg";
 import classNames from "classnames";
 import { Menu } from "@headlessui/react";
+import Modal from "../Modal";
 
 const controlsSetting = [
   {
@@ -23,10 +24,24 @@ const controlsSetting = [
   {
     img: screenShareSVG,
     hoverText: "Present now",
+    modal: "modal01",
+    data: [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet",
+    ],
   },
   {
     img: moreSVG,
     hoverText: "More Options",
+    modal: "modal02",
+    data: [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet.",
+    ],
   },
   {
     img: leaveCallSVG,
@@ -54,13 +69,17 @@ function MeetControls() {
               <p className="hidden absolute hover:visible invisible top-0 text-sm text-red-800">
                 {e.hoverText}
               </p>
-              <img
-                src={e.img}
-                width={22}
-                height={22}
-                className="cursor-pointer box-border"
-                alt={e.hoverText}
-              />
+              {e.modal ? (
+                <Modal img={e.img} data={e.data} modal={e.modal} />
+              ) : (
+                <img
+                  src={e.img}
+                  width={22}
+                  height={22}
+                  className="cursor-pointer box-border"
+                  alt={e.hoverText}
+                />
+              )}
             </div>
           );
         })}

@@ -1,32 +1,35 @@
 import { Menu } from "@headlessui/react";
+import classNames from "classnames";
 
-function Modal() {
+function Modal(prop: any) {
+  console.log(prop.data);
   return (
     <Menu>
-      <Menu.Button>More</Menu.Button>
-      <Menu.Items>
+      <Menu.Button as="div">
+        <img src={prop.img} alt="" width={22} height={22} />
+      </Menu.Button>
+      <Menu.Items
+        as="div"
+        className={classNames(
+          "absolute w-52  border bg-white shadow-xl z-10  box-content rounded-md",
+          {
+            "-top-80 right-0": prop.modal === "modal01",
+            "-top-80 -right-44": prop.modal === "modal02",
+          }
+        )}
+      >
         <Menu.Item>
-          {({ active }) => (
-            <a
-              className={`${active && "bg-blue-500"}`}
-              href="/account-settings"
-            >
-              Account settings
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              className={`${active && "bg-blue-500"}`}
-              href="/account-settings"
-            >
-              Documentation
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item disabled>
-          <span className="opacity-75">Invite a friend (coming soon!)</span>
+          <div className="">
+            {prop.data.map((item: any) => {
+              return (
+                <div key={item} className="py-1">
+                  <div className="flex space-x-3 items-center p-2 cursor-pointer hover:bg-zinc-300">
+                    <span className="text-black">{item}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </Menu.Item>
       </Menu.Items>
     </Menu>

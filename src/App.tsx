@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="md:flex w-full">
+    <div className="md:flex w-full relative">
       <div className="w-full">
         <User isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

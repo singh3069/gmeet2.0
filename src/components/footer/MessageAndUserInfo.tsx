@@ -39,13 +39,13 @@ function MessageAndUserInfo({ setIsOpen, isOpen }: any) {
             <div
               className="p-2 hover:bg-neutral-700 relative box-border rounded-full cursor-pointer"
               key={e.hoverText}
+              onClick={toggleSideBar}
             >
               <p className="hidden absolute hover:visible invisible top-0 text-sm text-red-800">
                 {e.hoverText}
               </p>
               <img
                 src={e.img}
-                onClick={toggleSideBar}
                 width={22}
                 height={22}
                 className="cursor-pointer box-border"
