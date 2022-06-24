@@ -46,20 +46,20 @@ const userData = [
 function User() {
   return (
     <div className="w-full  h-screen ">
-      <div className=" h-full grid lg:grid-rows-2 gap-3 lg:p-20 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
+      <div className=" h-full grid lg:grid-rows-2 gap-3 lg:pb-8 grid-flow-row grid-cols-2  lg:grid-cols-4 lg:gap-2.5 text-center  ">
         {userData.map((e) => {
           return (
             <div
               key={e.name}
-              className="box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 p-4 flex flex-col justify-center items-center"
+              className="box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 p-2 flex flex-col justify-center items-center"
             >
               <div className="w-full  flex justify-end">
                 <div className="p-2 hover:bg-neutral-700 relative box-border rounded-full cursor-pointer">
                   <img
                     src={e.mic}
                     alt="mic"
-                    width={12}
-                    height={12}
+                    width={18}
+                    height={18}
                     className=""
                   />
                 </div>
