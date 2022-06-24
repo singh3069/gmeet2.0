@@ -94,7 +94,7 @@ function MeetControls({ setIsOpen, isOpen }: any) {
             width={22}
             height={22}
             className="cursor-pointer box-border"
-            // alt={e.text}
+            alt='up Arrow'
           />
         </div>
       </div>

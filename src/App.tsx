@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import User from "./components/User";
-import Sidebar from "./components/Sidebar";
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,6 @@ function App() {
         <User isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <Footer setIsOpen={setIsOpen} isOpen={isOpen} />
-      {/* <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} /> */}
     </div>
   );
 }
