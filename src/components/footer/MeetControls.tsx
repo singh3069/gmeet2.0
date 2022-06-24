@@ -38,7 +38,7 @@ const controlsSetting = [
 function MeetControls() {
   return (
     <div>
-      <div className="flex space-x-4">
+      <div className="flex justify-center  space-x-4">
         {controlsSetting.map((e) => {
           return (
             <div

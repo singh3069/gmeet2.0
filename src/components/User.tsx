@@ -49,7 +49,7 @@ function User({ isOpen, setIsOpen }: any) {
   return (
     <div
       className={classNames(
-        "w-auto transition-[margin] mr-0 ease-in-out duration-300 h-screen flex-shrink",
+        "w-auto transition-[margin] mr-0 ease-in-out px-5 mt-20 mb-10 md:mt-0 md:mb-0 duration-300 h-screen",
         {
           "mr-80": isOpen,
         }
@@ -68,7 +68,7 @@ function User({ isOpen, setIsOpen }: any) {
             <div
               key={e.name}
               className={classNames(
-                "box-border w-full  border border-black my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 p-2 flex flex-col justify-center items-center",
+                "box-border w-full  border border-black md:my-6 lg:mx-auto rounded-md cursor-pointer shadow-2xl bg-zinc-800 space-y-5 sm:p-2 flex flex-col justify-center items-center",
                 {
                   "h-full ": isOpen,
                 }

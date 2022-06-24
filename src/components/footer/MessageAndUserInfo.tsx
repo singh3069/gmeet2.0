@@ -32,7 +32,7 @@ function MessageAndUserInfo({ setIsOpen, isOpen }: any) {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="invisible md:visible">
       <div className="flex space-x-4">
         {data.map((e) => {
           return (

@@ -12,7 +12,7 @@ function TimeAndName() {
     };
   });
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center invisible md:visible">
       <p className="text-white">{currentTime}</p>
       <span className="px-2">|</span>
       <p>ump-vcip-ojy</p>
